@@ -84,6 +84,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 40px;
+  transition: box-shadow 200ms;
 }
 .header__login-item a {
   text-decoration: none;

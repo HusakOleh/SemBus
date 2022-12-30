@@ -14,7 +14,7 @@ root.render(
     <BrowserRouter basename={'/'}>
         <AppProvider>
             <App />
-        </AppProvider>z
+        </AppProvider>
     </BrowserRouter>
     </React.StrictMode>
 );

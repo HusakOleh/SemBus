@@ -2,6 +2,9 @@ import React from "react";
 import './utils/_reset.scss';
 import './App.scss';
 
+import {Header} from "./components/Header/Header";
+import {Footer} from "./components/Footer/Footer";
+
 import {Button, Checkbox, defaultTheme, Provider, TextField} from '@adobe/react-spectrum';
 import {Form, Route, Routes} from "react-router-dom";
 import Page404 from "./pages/Page404/Page404";
@@ -9,7 +12,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
 import 'react-chat-widget/lib/styles.css';
 import routes from "./utils/routes";
-import Header from "./components/Header/Header";
 import {useContext, useEffect} from "react";
 import {AppContext} from "./context/appContext";
 import {getIpNumbers, getTranslation, setContactToRDB} from "./utils/helpers";
@@ -129,6 +131,8 @@ function App() {
 
                 <Route path='*' element={<Page404 />} />
             </Routes>
+
+          <Footer />
         </div>
     );
     //#endregion

@@ -8,7 +8,7 @@ import {auth, logOut} from "../../utils/firebaseConfigAndFunctions";
 import {AppContext} from "../../context/appContext";
 
 
-const Header = () => {
+export const Header = () => {
   //#region Get user from app context
   const {user} = useContext(AppContext);
   //#endregion
@@ -90,7 +90,7 @@ const Header = () => {
           className="header__list-item header__list-item-active"
         >
           <a
-            href=""
+            href="tel:+6494461709"
             className="header__list-link"
           >
             Телефон
@@ -152,5 +152,3 @@ const Header = () => {
   );
   //#endregion
 };
-
-export default Header;

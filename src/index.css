@@ -287,6 +287,10 @@ body {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -317,6 +321,10 @@ body {
 }
 .scale:hover {
   transform: scale(1.04);
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 label {
