@@ -1,0 +1,146 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.header {
+  background: yellow;
+  padding: 20px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  overflow: hidden;
+
+  &-is-open {
+    height: 100vh;
+    background: linear-gradient(#fff 20%, $c-red);
+
+    @include onDesktop {
+      height: auto;
+      background: yellow;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 84px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__opener {
+    width: 25px;
+    height: 25px;
+    background: url("../../../public/assets/images/menu-open.svg") center/cover no-repeat;
+
+    //@include onDesktop {
+    //  display: none;
+    //}
+
+    &-open {
+      background-image: url("../../../public/assets/images/menu-close.svg");
+    }
+  }
+
+  &__nav {
+    background: pink;
+    margin: 50px 10px 70px;
+  }
+
+  &__list {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      padding: 10px 0 0;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      height: 50px;
+      justify-content: space-between;
+
+      &-active {
+        .header__list-link {
+          color: $c-black;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          border-radius: 2px;
+          background: $c-red;
+        }
+      }
+
+
+    }
+
+    &-link {
+      @include font;
+      font-size: 16px;
+      color: $c-gray;
+      text-decoration: none;
+
+      &:hover {
+        color: $c-black;
+      }
+    }
+  }
+
+  &__login {
+    background: orange;
+    margin: 0 10px 110px;
+    display: flex;
+    gap: 20px;
+
+    &-item {
+      background: $c-red;
+      //width: 100px;
+      height: 28px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      //flex-wrap: wrap;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10px;
+      }
+
+      &-white {
+        background: #fff;
+        padding: 0 20px;
+        a {
+          color: $c-black;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: inset 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+
+  &__socials {
+    //background: #000;
+    //height: 50px;
+
+  }
+
+  //@include onDesktop {
+  //  flex-direction: row;
+  //  height: auto;
+  //  overflow: visible;
+  //}
+}

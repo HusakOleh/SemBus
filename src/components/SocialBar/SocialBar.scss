@@ -1,0 +1,20 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.socials {
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  width: max-content;
+  gap: 25px;
+
+  &-full-width {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 22px;
+  }
+
+}

@@ -1,0 +1,16 @@
+@import "./vars";
+
+@mixin onDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin font {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+
