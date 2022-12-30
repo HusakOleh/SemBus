@@ -2,8 +2,6 @@ import React from "react";
 import './utils/_reset.scss';
 import './App.scss';
 
-
-
 import {Button, Checkbox, defaultTheme, Provider, TextField} from '@adobe/react-spectrum';
 import {Form, Route, Routes} from "react-router-dom";
 import Page404 from "./pages/Page404/Page404";

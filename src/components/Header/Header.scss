@@ -2,21 +2,19 @@
 @import "../../utils/vars";
 
 .header {
-  background: yellow;
+  //background: yellow;
   padding: 20px 20px 10px;
   display: flex;
   flex-direction: column;
   height: 50px;
   overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  transition: height ease-in-out 500ms, background ease-in-out 500ms;
 
   &-is-open {
     height: 100vh;
     background: linear-gradient(#fff 20%, $c-red);
-
-    @include onDesktop {
-      height: auto;
-      background: yellow;
-    }
   }
 
   &__top {
@@ -24,6 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
   }
 
   &__logo {
@@ -36,10 +35,8 @@
     width: 25px;
     height: 25px;
     background: url("../../../public/assets/images/menu-open.svg") center/cover no-repeat;
+    transition: background 300ms;
 
-    //@include onDesktop {
-    //  display: none;
-    //}
 
     &-open {
       background-image: url("../../../public/assets/images/menu-close.svg");
@@ -47,11 +44,13 @@
   }
 
   &__nav {
-    background: pink;
+    //background: pink;
     margin: 50px 10px 70px;
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 0;
     margin: 0;
@@ -61,7 +60,7 @@
       width: max-content;
       display: flex;
       flex-direction: column;
-      height: 50px;
+      height: 40px;
       justify-content: space-between;
 
       &-active {
@@ -94,21 +93,19 @@
   }
 
   &__login {
-    background: orange;
+    //background: orange;
     margin: 0 10px 110px;
     display: flex;
     gap: 20px;
 
     &-item {
       background: $c-red;
-      //width: 100px;
       height: 28px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0 40px;
-      //flex-wrap: wrap;
 
       a {
         text-decoration: none;
@@ -117,7 +114,7 @@
       }
 
       &-white {
-        background: #fff;
+        background: #f5f5f5;
         padding: 0 20px;
         a {
           color: $c-black;
@@ -131,16 +128,53 @@
     }
   }
 
+  @include onDesktop {
+    flex-direction: row;
+    height: auto;
+    overflow: visible;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 120px 20px;
+    gap: 30px;
 
-  &__socials {
-    //background: #000;
-    //height: 50px;
+    &__opener, &__socials {
+      display: none;
+    }
 
+    &__logo {
+      width: 174px;
+    }
+
+    &__nav {
+      margin: 0;
+    }
+
+    &__list {
+      flex-direction: row;
+      gap: 80px;
+
+      &-item {
+        //height: 50px;
+        padding: 0;
+      }
+
+      &-link {
+        font-size: 20px;
+      }
+    }
+
+    &__login  {
+      margin: 0;
+      gap: 30px;
+
+      &-item {
+        height: 40px;
+        border-radius: 20px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
   }
-
-  //@include onDesktop {
-  //  flex-direction: row;
-  //  height: auto;
-  //  overflow: visible;
-  //}
 }

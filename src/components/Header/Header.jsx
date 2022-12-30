@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import classNames from 'classnames';
 import './Header.scss';
 import {Link} from "react-router-dom";
@@ -15,6 +15,15 @@ const Header = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
   const [isLogged, setIsLogged] = useState(false);
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (openMenu) {
+      body.style.overflow = "hidden";
+    } else {body.style.overflow = "inherit"}
+
+  }, [openMenu])
 
   //#region Render
   return (
