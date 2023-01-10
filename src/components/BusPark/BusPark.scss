@@ -1,0 +1,168 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.buspark {
+  padding: 15px 20px 50px;
+  background: yellow;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__about-company {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    //background: mediumseagreen;
+
+    &-title {
+      //text-align: left;
+      font-size: 22px;
+      font-weight: bold;
+      font: $font-main;
+      margin: 0;
+    }
+
+    &-text {
+      //text-align: left;
+      font-size: 10px;
+      font: $font-main;
+      color: $c-gray;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__slider {
+    background: gray;
+
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__park {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    //background: mediumseagreen;
+    text-align: left;
+
+    &-title {
+      font-size: 22px;
+      font-weight: bold;
+      font: $font-main;
+      margin: 0 0 4px;
+    }
+
+    &-text {
+      font-size: 10px;
+      font: $font-main;
+      color: $c-gray;
+      max-width: 400px;
+      margin: 0;
+    }
+
+    &-list-title {
+      font-size: 10px;
+      font: $font-main;
+      color: $c-red;
+      margin: 0 0 10px;
+    }
+
+    &-list {
+      font-size: 10px;
+      font: $font-main;
+      color: $c-red;
+      margin: 0;
+      padding-left: 16px;
+      list-style: disc;
+
+      &-item {
+        padding-bottom: 14px;
+        color: $c-extra-black;
+      }
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background: url("../../../public/assets/images/redpoint.png") center/contain no-repeat;
+    height: 220px;
+    width: 220px;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    padding: 55px 120px 150px 260px;
+    justify-content: space-between;
+
+    &__about-company {
+      display: none;
+    }
+
+    &__slider {
+      height: 100%;
+      flex-grow: 3;
+    }
+
+    &__park {
+      position: relative;
+      padding-top: 20px;
+      flex-grow: 2;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        transform: translate(0);
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 13px;
+        background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+      }
+
+      &-title {
+        font-size: 38px;
+      }
+
+      &-text {
+        font-size: 16px;
+      }
+
+      &-list-title {
+        font-size: 16px;
+      }
+
+      &-list {
+        padding-left: 23px;
+
+        &-item {
+          font-size: 16px;
+        }
+      }
+    }
+
+
+    &::after {
+      content: " ";
+      height: 100%;
+      width: 24px;
+      background: linear-gradient(#fff, $c-red);
+      position: absolute;
+      left: 120px;
+      bottom: 0;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}

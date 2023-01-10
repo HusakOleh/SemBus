@@ -1,0 +1,140 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 20px 10px;
+  width: 100%;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+}
+.benefits__visual {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.benefits__visual-img {
+  padding-left: 10px;
+}
+.benefits__visual-img-main {
+  object-fit: contain;
+  height: 160px;
+  z-index: 1;
+  position: relative;
+}
+.benefits__visual-img::before {
+  content: " ";
+  background: url("../../../public/assets/images/redpoint.png") center/contain no-repeat;
+  position: absolute;
+  transform: translateX(-55%);
+  width: 160px;
+  height: 160px;
+  z-index: 0;
+}
+.benefits__visual-list {
+  padding: 0;
+  margin: 0;
+  gap: 9px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.benefits__text {
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+}
+.benefits__text-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+.benefits__text-subtitle {
+  font-size: 10px;
+  color: #707070;
+  text-align: left;
+}
+.benefits__text-listtitle {
+  font-size: 10px;
+  color: #DC332E;
+  text-align: left;
+}
+.benefits__text-list {
+  font-size: 10px;
+  color: #DC332E;
+  text-align: left;
+  padding: 0 0 0 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.benefits__text-list-item {
+  list-style: disc;
+  color: #121212;
+}
+@media (min-width: 1024px) {
+  .benefits {
+    padding: 30px 120px;
+    flex-direction: row;
+    justify-content: end;
+    gap: 70px;
+  }
+  .benefits__visual {
+    padding: 90px 0 60px;
+    gap: 30px;
+  }
+  .benefits__visual-img {
+    padding-left: 0;
+  }
+  .benefits__visual-img-main {
+    height: 550px;
+  }
+  .benefits__visual-img::before {
+    transform: translateX(-60%);
+    width: 530px;
+    height: 530px;
+  }
+  .benefits__visual-list {
+    gap: 44px;
+  }
+  .benefits__text {
+    display: block;
+    position: relative;
+    padding-top: 30px;
+  }
+  .benefits__text::before {
+    content: " ";
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+    width: 52px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+  }
+  .benefits__text::after {
+    content: " ";
+    height: 100%;
+    width: 24px;
+    background: linear-gradient(#fff, #DC332E);
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+  }
+  .benefits__text-title {
+    font-size: 40px;
+  }
+  .benefits__text-subtitle {
+    font-size: 16px;
+  }
+  .benefits__text-listtitle {
+    font-size: 16px;
+  }
+  .benefits__text-list {
+    font-size: 16px;
+    padding: 0 0 0 16px;
+    margin: 0;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=Benefits.css.map */

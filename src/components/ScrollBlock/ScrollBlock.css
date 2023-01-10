@@ -1,0 +1,78 @@
+.scrollblock {
+  padding: 45px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.scrollblock__scrollmap {
+  background: gray;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+.scrollblock__content {
+  align-self: start;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.scrollblock__content-title {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+}
+.scrollblock__content-text {
+  text-align: left;
+  font-size: 10px;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  color: #707070;
+  margin: 0;
+}
+.scrollblock__content::before {
+  content: "";
+  position: absolute;
+  background: url("../../../public/assets/images/redpoint.png") center/contain no-repeat;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+@media (min-width: 1024px) {
+  .scrollblock {
+    padding: 55px 120px 150px;
+  }
+  .scrollblock__scrollmap {
+    order: 2;
+  }
+  .scrollblock__content {
+    order: 1;
+    padding: 20px 0 0;
+    gap: 20px;
+  }
+  .scrollblock__content::before {
+    content: " ";
+    position: absolute;
+    transform: translate(0);
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 13px;
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+  }
+  .scrollblock__content-title {
+    text-align: left;
+    font-size: 40px;
+  }
+  .scrollblock__content-text {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=ScrollBlock.css.map */

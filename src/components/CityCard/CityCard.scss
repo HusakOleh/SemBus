@@ -1,0 +1,45 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.city-card {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  //position: absolute;
+  padding: 5px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 9px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 8px;
+    margin: 0;
+  }
+
+  &__price {
+    font-size: 9px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 8px;
+    color: $c-red;
+  }
+
+  &__content {
+    font-size: 9px;
+    text-align: left;
+    padding-left: 6px;
+    color: $c-gray;
+    margin: 0;
+  }
+}

@@ -61,7 +61,7 @@
   background: #DC332E;
 }
 .header__list-link {
-  font-family: "Zen Maru Gothic", "Noto Sans Display", sans-serif;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -91,6 +91,9 @@
   color: #fff;
   font-size: 10px;
 }
+.header__login-item a:hover {
+  color: #fff;
+}
 .header__login-item-white {
   background: #f5f5f5;
   padding: 0 20px;
@@ -98,10 +101,12 @@
 .header__login-item-white a {
   color: #333333;
 }
+.header__login-item-white a:hover {
+  color: #333333;
+}
 .header__login-item:hover {
   cursor: pointer;
   box-shadow: inset 0 4px 10px 0 rgba(0, 0, 0, 0.5);
-  color: inherit;
 }
 @media (min-width: 1024px) {
   .header {
@@ -110,7 +115,7 @@
     overflow: visible;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 120px 20px;
+    padding: 80px 120px 30px;
     gap: 30px;
   }
   .header__opener, .header__socials {

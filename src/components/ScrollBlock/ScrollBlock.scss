@@ -1,0 +1,92 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.scrollblock {
+  //background: yellow;
+  padding: 45px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__scrollmap {
+    background: gray;
+
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__content {
+    //background: pink;
+    align-self: start;
+    padding-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-title {
+      text-align: left;
+      font-size: 22px;
+      font-weight: bold;
+      font: $font-main;
+      //margin: 0;
+    }
+
+    &-text {
+      text-align: left;
+      font-size: 10px;
+      font: $font-main;
+      color: $c-gray;
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../../public/assets/images/redpoint.png") center/contain no-repeat;
+      height: 200px;
+      width: 200px;
+      z-index: 1;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  @include onDesktop {
+    padding: 55px 120px 150px;
+
+    &__scrollmap {
+      order: 2;
+    }
+
+    &__content {
+      order: 1;
+      padding: 20px 0 0;
+      gap: 20px;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        transform: translate(0);
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 13px;
+        background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+      }
+
+      &-title {
+        text-align: left;
+        font-size: 40px;
+      }
+
+      &-text {
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+  }
+}

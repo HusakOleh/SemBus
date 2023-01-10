@@ -278,7 +278,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Zen Maru Gothic", "Noto Sans Display", sans-serif, sans-serif !important;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif, sans-serif !important;
 }
 
 .App {
@@ -329,6 +329,15 @@ body {
 
 label {
   font-weight: 500;
+}
+
+.wrap {
+  margin-bottom: 15px;
+}
+@media (min-width: 1024px) {
+  .wrap {
+    margin-bottom: 40px;
+  }
 }
 
 .Avatar {

@@ -1,0 +1,117 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 10px;
+  width: 100%;
+  font: $font-main;
+
+
+  //background: green;
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 11px;
+  }
+
+  &__ordering {
+
+  }
+
+  &__circle {
+    //background: yellow;
+    //height: 100px;
+    display: none;
+  }
+
+  @include onDesktop {
+    padding: 30px 120px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__title {
+      grid-column: 1 / 9;
+      grid-row: 1 / 2;
+      text-align: left;
+
+      font-size: 50px;
+      //background: pink;
+    }
+
+    &__description {
+      grid-column: 1 / 8;
+      grid-row: 2 / 3;
+      text-align: left;
+      font-size: 18px;
+      //background: orange;
+    }
+
+    &__ordering {
+      grid-column: 1 / 7;
+      grid-row: 3 / 4;
+      width: auto;
+    }
+
+    &__circle {
+      grid-column: 8 / 13;
+      grid-row: 2 / 4;
+      margin: -40px 0 0 -20px;
+
+      height: 510px;
+      width: 510px;
+      display: block;
+      position: relative;
+
+      background: url("../../../public/assets/images/redpoint-set/shell.svg") center/cover no-repeat;
+
+      &-circle {
+        //background: url("../../../public/assets/images/redpoint-set/circle.svg") center/cover no-repeat;
+        background: radial-gradient(rgba(255, 156, 168, 0.7), rgba(241, 241, 241, 0.3));
+        width: 410px;
+        height: 410px;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        backdrop-filter: blur(5px);
+      }
+
+      &-core {
+        background: url("../../../public/assets/images/redpoint-set/core.png") center/cover no-repeat;
+        width: 330px;
+        height: 330px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+      }
+
+      &-card-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 140px;
+      }
+
+      &-card-top {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        z-index: 3;
+        width: 120px;
+      }
+    }
+  }
+}

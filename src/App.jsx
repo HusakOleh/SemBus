@@ -108,12 +108,13 @@ function App() {
     //#region Render
     return (
         <div className="App">
-            <Header />
+            <div className="wrap">
+              <Header />
+            </div>
 
-
-            <h1>
-                {getTranslation('SemBus', dictionary, defaultDictionary)}
-            </h1>
+            {/*<h1>*/}
+            {/*    {getTranslation('SemBus', dictionary, defaultDictionary)}*/}
+            {/*</h1>*/}
 
             {/*<Widget*/}
             {/*    handleNewUserMessage={handleNewUserMessage}*/}
@@ -125,14 +126,18 @@ function App() {
             <Routes>
                 {
                     routes.map((data,idx) => (
-                        <Route key={idx} path={data.path} element={data.component} exact />
+                        <Route
+                          key={idx}
+                          path={data.path}
+                          element={data.component}
+                          exact
+                        />
                     ))
                 }
 
                 <Route path='*' element={<Page404 />} />
             </Routes>
-
-          <Footer />
+            <Footer />
         </div>
     );
     //#endregion

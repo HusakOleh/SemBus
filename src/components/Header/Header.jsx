@@ -100,7 +100,7 @@ export const Header = () => {
     </nav>
 
     <div className="header__login">
-      {!isLogged
+      {isLogged
         ?
         (
           <>

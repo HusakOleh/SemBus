@@ -64,7 +64,13 @@ label {
   font-weight: 500;
 }
 
+.wrap {
+  margin-bottom: 15px;
 
+  @include onDesktop {
+    margin-bottom: 40px;
+  }
+}
 
 
 .Avatar {

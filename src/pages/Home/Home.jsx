@@ -1,11 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
+import './Home.scss';
 import {useNavigate} from "react-router-dom";
 import {AppContext} from "../../context/appContext";
 import {auth} from "../../utils/firebaseConfigAndFunctions";
 import {getTranslation} from "../../utils/helpers";
 import ClientChat from "../../components/ClientChat/ClientChat";
 
-const Home = () => {
+import { Order } from "../../components/Order/Order";
+import { Benefits } from "../../components/Benefits/Benefits";
+import { ScrollBlock } from "../../components/ScrollBlock/ScrollBlock";
+import { BusPark } from "../../components/BusPark/BusPark";
+
+export const Home = () => {
     //#region Get user from app context
     const {user} = useContext(AppContext);
     //#endregion
@@ -43,32 +49,49 @@ const Home = () => {
     //#region Render
     return (
         <>
-            <h1>
-                {getTranslation('Головна', dictionary, defaultDictionary)}
-            </h1>
+          {/*<h1>*/}
+          {/*  {getTranslation('Головна', dictionary, defaultDictionary)}*/}
+          {/*</h1>*/}
+          <section>
+            <div className="wrap">
+              <Order />
+            </div>
 
-            {isChatVisible ?
-                <div className={'UnauthorizedChat'}>
-                    <div
-                        className={'CloseChat'}
-                        onClick={() => toggleChat()}
-                    >
-                        X
-                    </div>
+            <div className="wrap">
+              <Benefits />
+            </div>
 
-                    <ClientChat />
-                </div>
-                :
-                <div
-                    onClick={() => toggleChat()}
-                    className={'OpenChat'}
-                >
-                    Open
-                </div>
-            }
+            <div className="wrap">
+              <ScrollBlock />
+            </div>
+
+            <div className="wrap">
+              <BusPark />
+            </div>
+          </section>
+
+          {/*#region*/}
+          {isChatVisible ?
+            <div className={'UnauthorizedChat'}>
+              <div
+                className={'CloseChat'}
+                onClick={() => toggleChat()}
+              >
+                X
+              </div>
+
+              <ClientChat />
+            </div>
+            :
+            <div
+              onClick={() => toggleChat()}
+              className={'OpenChat'}
+            >
+              Open
+            </div>
+          }
+          {/*#endregion*/}
         </>
     );
     //#endregion
 };
-
-export default Home;

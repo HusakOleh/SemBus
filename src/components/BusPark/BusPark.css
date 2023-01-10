@@ -1,0 +1,140 @@
+.buspark {
+  padding: 15px 20px 50px;
+  background: yellow;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.buspark__about-company {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.buspark__about-company-title {
+  font-size: 22px;
+  font-weight: bold;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  margin: 0;
+}
+.buspark__about-company-text {
+  font-size: 10px;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  color: #707070;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.buspark__slider {
+  background: gray;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.buspark__park {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+.buspark__park-title {
+  font-size: 22px;
+  font-weight: bold;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  margin: 0 0 4px;
+}
+.buspark__park-text {
+  font-size: 10px;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  color: #707070;
+  max-width: 400px;
+  margin: 0;
+}
+.buspark__park-list-title {
+  font-size: 10px;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  color: #DC332E;
+  margin: 0 0 10px;
+}
+.buspark__park-list {
+  font-size: 10px;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  color: #DC332E;
+  margin: 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+.buspark__park-list-item {
+  padding-bottom: 14px;
+  color: #121212;
+}
+.buspark::before {
+  content: " ";
+  position: absolute;
+  background: url("../../../public/assets/images/redpoint.png") center/contain no-repeat;
+  height: 220px;
+  width: 220px;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+@media (min-width: 1024px) {
+  .buspark {
+    flex-direction: row;
+    padding: 55px 120px 150px 260px;
+    justify-content: space-between;
+  }
+  .buspark__about-company {
+    display: none;
+  }
+  .buspark__slider {
+    height: 100%;
+    flex-grow: 3;
+  }
+  .buspark__park {
+    position: relative;
+    padding-top: 20px;
+    flex-grow: 2;
+  }
+  .buspark__park::before {
+    content: " ";
+    position: absolute;
+    transform: translate(0);
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 13px;
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+  }
+  .buspark__park-title {
+    font-size: 38px;
+  }
+  .buspark__park-text {
+    font-size: 16px;
+  }
+  .buspark__park-list-title {
+    font-size: 16px;
+  }
+  .buspark__park-list {
+    padding-left: 23px;
+  }
+  .buspark__park-list-item {
+    font-size: 16px;
+  }
+  .buspark::after {
+    content: " ";
+    height: 100%;
+    width: 24px;
+    background: linear-gradient(#fff, #DC332E);
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+  }
+  .buspark::before {
+    content: none;
+  }
+}
+
+/*# sourceMappingURL=BusPark.css.map */

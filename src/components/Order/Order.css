@@ -1,0 +1,91 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 10px;
+  width: 100%;
+  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+}
+.order__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.order__description {
+  font-size: 11px;
+}
+.order__circle {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .order {
+    padding: 30px 120px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .order__title {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    text-align: left;
+    font-size: 50px;
+  }
+  .order__description {
+    grid-column: 1/8;
+    grid-row: 2/3;
+    text-align: left;
+    font-size: 18px;
+  }
+  .order__ordering {
+    grid-column: 1/7;
+    grid-row: 3/4;
+    width: auto;
+  }
+  .order__circle {
+    grid-column: 8/13;
+    grid-row: 2/4;
+    margin: -40px 0 0 -20px;
+    height: 510px;
+    width: 510px;
+    display: block;
+    position: relative;
+    background: url("../../../public/assets/images/redpoint-set/shell.svg") center/cover no-repeat;
+  }
+  .order__circle-circle {
+    background: radial-gradient(rgba(255, 156, 168, 0.7), rgba(241, 241, 241, 0.3));
+    width: 410px;
+    height: 410px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    backdrop-filter: blur(5px);
+  }
+  .order__circle-core {
+    background: url("../../../public/assets/images/redpoint-set/core.png") center/cover no-repeat;
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+  .order__circle-card-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 140px;
+  }
+  .order__circle-card-top {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 3;
+    width: 120px;
+  }
+}
+
+/*# sourceMappingURL=Order.css.map */
