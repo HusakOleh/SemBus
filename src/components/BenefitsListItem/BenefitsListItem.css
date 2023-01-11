@@ -3,6 +3,7 @@
   flex-direction: row;
   gap: 12px;
   align-items: center;
+  cursor: pointer;
 }
 .list-item__img-wrap {
   display: flex;

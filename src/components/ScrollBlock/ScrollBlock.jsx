@@ -25,8 +25,6 @@ export const ScrollBlock = () => {
         </p>
       </div>
 
-
-
     </div>
   );
 };

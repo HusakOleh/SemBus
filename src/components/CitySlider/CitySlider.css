@@ -1,0 +1,18 @@
+.city-slider {
+  padding: 0 20px;
+}
+.city-slider__wrap {
+  height: 120px;
+  width: 80px;
+}
+@media (min-width: 1024px) {
+  .city-slider {
+    padding: 0 120px 70px;
+  }
+  .city-slider__wrap {
+    height: 220px;
+    width: 130px;
+  }
+}
+
+/*# sourceMappingURL=CitySlider.css.map */

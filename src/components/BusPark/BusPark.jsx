@@ -18,17 +18,6 @@ export const BusPark = () => {
 
   return (
     <div className="buspark">
-
-      <div className="buspark__about-company">
-        <h1  className="buspark__about-company-title">
-          Компанія SEM BUS
-        </h1>
-        <p  className="buspark__about-company-text">
-          здійснює щоденні поїздки до Литви, Латвії, Естонії.
-          Ми відповідаємо за комфорт, сервіс та безпеку наших пасажирів.
-        </p>
-      </div>
-
       <div className="buspark__slider">
         ТУТ МАЄ БУТИ СЛАЙДЕР
       </div>

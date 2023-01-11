@@ -21,9 +21,17 @@
 }
 .scrollblock__content-title {
   text-align: left;
-  font-size: 22px;
-  font-weight: bold;
-  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .scrollblock__content-title {
+    font-size: 40px;
+  }
 }
 .scrollblock__content-text {
   text-align: left;
@@ -58,16 +66,12 @@
   .scrollblock__content::before {
     content: " ";
     position: absolute;
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+    width: 50px;
+    height: 13px;
     transform: translate(0);
     left: 0;
     top: 0;
-    width: 50px;
-    height: 13px;
-    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
-  }
-  .scrollblock__content-title {
-    text-align: left;
-    font-size: 40px;
   }
   .scrollblock__content-text {
     text-align: left;

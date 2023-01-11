@@ -2,7 +2,6 @@
 @import "../../utils/vars";
 
 .scrollblock {
-  //background: yellow;
   padding: 45px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -17,7 +16,6 @@
   }
 
   &__content {
-    //background: pink;
     align-self: start;
     padding-bottom: 120px;
     position: relative;
@@ -28,10 +26,7 @@
 
     &-title {
       text-align: left;
-      font-size: 22px;
-      font-weight: bold;
-      font: $font-main;
-      //margin: 0;
+      @include font-heading(40px);
     }
 
     &-text {
@@ -68,19 +63,10 @@
       gap: 20px;
 
       &::before {
-        content: " ";
-        position: absolute;
+        @include before-logo(50px, 13px);
         transform: translate(0);
         left: 0;
         top: 0;
-        width: 50px;
-        height: 13px;
-        background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
-      }
-
-      &-title {
-        text-align: left;
-        font-size: 40px;
       }
 
       &-text {

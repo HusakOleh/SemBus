@@ -1,0 +1,20 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.city-slider {
+  padding: 0 20px;
+
+  &__wrap {
+    height: 120px;
+    width: 80px;
+  }
+
+  @include onDesktop {
+    padding: 0 120px 70px;
+
+    &__wrap {
+      height: 220px;
+      width: 130px;
+    }
+  }
+}

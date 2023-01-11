@@ -9,12 +9,8 @@
   width: 100%;
   font: $font-main;
 
-
-  //background: green;
-
   &__title {
-    font-size: 18px;
-    font-weight: bold;
+    @include font-heading(50px);
   }
 
   &__description {
@@ -26,8 +22,6 @@
   }
 
   &__circle {
-    //background: yellow;
-    //height: 100px;
     display: none;
   }
 
@@ -41,9 +35,6 @@
       grid-column: 1 / 9;
       grid-row: 1 / 2;
       text-align: left;
-
-      font-size: 50px;
-      //background: pink;
     }
 
     &__description {
@@ -51,7 +42,6 @@
       grid-row: 2 / 3;
       text-align: left;
       font-size: 18px;
-      //background: orange;
     }
 
     &__ordering {
@@ -99,18 +89,18 @@
 
       &-card-bottom {
         position: absolute;
-        left: 0;
-        bottom: 0;
+        left: -10px;
+        bottom: -20px;
         z-index: 1;
         width: 140px;
       }
 
       &-card-top {
         position: absolute;
-        right: 5px;
-        top: 5px;
+        right: -20px;
+        top: -15px;
         z-index: 3;
-        width: 120px;
+        width: 140px;
       }
     }
   }

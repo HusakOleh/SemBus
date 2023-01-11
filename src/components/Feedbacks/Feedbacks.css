@@ -1,0 +1,42 @@
+.feedbacks {
+  padding: 0 20px 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.feedbacks__title {
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .feedbacks__title {
+    font-size: 50px;
+  }
+}
+.feedbacks__slider {
+  background: gray;
+}
+@media (min-width: 1024px) {
+  .feedbacks {
+    padding: 190px 120px 140px;
+    position: relative;
+    gap: 100px;
+  }
+  .feedbacks::before {
+    content: " ";
+    position: absolute;
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+    width: 86px;
+    height: 23px;
+    transform: translate(-50%, -100%);
+    left: 50%;
+    top: 190px;
+  }
+}
+
+/*# sourceMappingURL=Feedbacks.css.map */

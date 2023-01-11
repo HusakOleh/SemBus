@@ -1,0 +1,61 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.videoblock {
+  padding: 0 20px;
+  width: 100%;
+  //background: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &__title {
+    text-align: left;
+    @include font-heading(34px);
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 10px;
+    color: $c-gray;
+    margin: 0;
+    width: 100%;
+  }
+
+
+  &__player {
+    width: 100%;
+    height: 100px;
+    background: green;
+  }
+
+  @include onDesktop {
+    padding: 0 120px 60px;
+    flex-direction: row;
+    gap: 30px;
+
+    &__content {
+      gap: 20px;
+      align-items: flex-start;
+      flex-grow: 7;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__player {
+      flex-grow: 5;
+      flex-shrink: 0;
+      flex-basis: 480px;
+    }
+  }
+}

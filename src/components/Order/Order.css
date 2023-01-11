@@ -7,8 +7,17 @@
   font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
 }
 .order__title {
-  font-size: 18px;
-  font-weight: bold;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .order__title {
+    font-size: 50px;
+  }
 }
 .order__description {
   font-size: 11px;
@@ -27,7 +36,6 @@
     grid-column: 1/9;
     grid-row: 1/2;
     text-align: left;
-    font-size: 50px;
   }
   .order__description {
     grid-column: 1/8;
@@ -74,17 +82,17 @@
   }
   .order__circle-card-bottom {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -10px;
+    bottom: -20px;
     z-index: 1;
     width: 140px;
   }
   .order__circle-card-top {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: -20px;
+    top: -15px;
     z-index: 3;
-    width: 120px;
+    width: 140px;
   }
 }
 

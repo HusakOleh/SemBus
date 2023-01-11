@@ -130,8 +130,7 @@ export const Header = () => {
             <div className="header__login-item">
               <Link
                 to={'/'}
-                onClick={() => logOut()
-                }
+                onClick={() => logOut()}
               >
                 Вихід
               </Link>

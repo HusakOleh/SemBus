@@ -1,0 +1,48 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.certificates {
+  padding: 40px 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  &__title {
+    @include font-heading(50px);
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px 10px;
+    justify-content: space-between;
+
+    &__item {
+      width: 30%;
+    }
+  }
+
+  &::before {
+    @include before-logo(30px, 8px);
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, 0);
+  }
+
+  @include onDesktop {
+    padding: 130px 120px 60px;
+    gap: 100px;
+
+    &__items {
+      gap: 12px 50px;
+    }
+
+    &::before {
+      width: 85px;
+      height: 23px;
+      top: 110px;
+    }
+  }
+}

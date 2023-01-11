@@ -20,6 +20,7 @@
 .benefits__visual-img-main {
   object-fit: contain;
   height: 160px;
+  width: auto;
   z-index: 1;
   position: relative;
 }
@@ -44,9 +45,18 @@
   font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
 }
 .benefits__text-title {
-  font-size: 22px;
-  font-weight: bold;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
   text-align: left;
+}
+@media (min-width: 1024px) {
+  .benefits__text-title {
+    font-size: 40px;
+  }
 }
 .benefits__text-subtitle {
   font-size: 10px;
@@ -104,10 +114,10 @@
   }
   .benefits__text::before {
     content: " ";
+    position: absolute;
     background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
     width: 52px;
     height: 14px;
-    position: absolute;
     left: 0;
     top: 14px;
   }
@@ -119,9 +129,6 @@
     position: absolute;
     left: -50px;
     bottom: 0;
-  }
-  .benefits__text-title {
-    font-size: 40px;
   }
   .benefits__text-subtitle {
     font-size: 16px;

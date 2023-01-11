@@ -1,29 +1,10 @@
 .buspark {
   padding: 15px 20px 50px;
-  background: yellow;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.buspark__about-company {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.buspark__about-company-title {
-  font-size: 22px;
-  font-weight: bold;
-  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
-  margin: 0;
-}
-.buspark__about-company-text {
-  font-size: 10px;
-  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
-  color: #707070;
-  max-width: 400px;
-  margin: 0 auto;
 }
 .buspark__slider {
   background: gray;
@@ -39,10 +20,18 @@
   text-align: left;
 }
 .buspark__park-title {
-  font-size: 22px;
-  font-weight: bold;
-  font: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
   margin: 0 0 4px;
+}
+@media (min-width: 1024px) {
+  .buspark__park-title {
+    font-size: 40px;
+  }
 }
 .buspark__park-text {
   font-size: 10px;
@@ -86,9 +75,6 @@
     padding: 55px 120px 150px 260px;
     justify-content: space-between;
   }
-  .buspark__about-company {
-    display: none;
-  }
   .buspark__slider {
     height: 100%;
     flex-grow: 3;
@@ -101,15 +87,12 @@
   .buspark__park::before {
     content: " ";
     position: absolute;
+    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+    width: 50px;
+    height: 13px;
     transform: translate(0);
     left: 0;
     top: 0;
-    width: 50px;
-    height: 13px;
-    background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
-  }
-  .buspark__park-title {
-    font-size: 38px;
   }
   .buspark__park-text {
     font-size: 16px;

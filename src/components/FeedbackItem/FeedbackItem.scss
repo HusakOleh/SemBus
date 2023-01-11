@@ -1,0 +1,102 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+.feedback-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: pink;
+  padding: 12px 10px 10px;
+  height: 100%;
+  width: 120px;
+  gap: 3px;
+
+  &__photo {
+    width: 40px;
+    object-fit: cover;
+    margin-bottom: 9px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__city {
+    font-size: 10px;
+  }
+
+  &__rate {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+
+    &-star {
+      background: url("../../../public/assets/images/icons/star.svg") center/contain no-repeat;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .stars--1 .feedback-item__rate-star:nth-child(-n+1),
+  .stars--2 .feedback-item__rate-star:nth-child(-n+2),
+  .stars--3 .feedback-item__rate-star:nth-child(-n+3),
+  .stars--4 .feedback-item__rate-star:nth-child(-n+4),
+  .stars--5 .feedback-item__rate-star:nth-child(-n+5) {
+    background-image: url("../../../public/assets/images/icons/star-active.svg");
+  }
+
+  &__content {
+    font-size: 10px;
+    margin: 9px 0;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background: url("../../../public/assets/images/icons/feedsback.svg") center/contain no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  @include onDesktop {
+    padding: 46px 40px 23px;
+    width: 300px;
+    gap: 4px;
+
+    &__photo {
+      width: 100px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__city {
+      font-size: 14px;
+    }
+
+    &__rate {
+      &-star {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &__content {
+      font-size: 14px;
+    }
+
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

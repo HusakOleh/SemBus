@@ -1,0 +1,56 @@
+.certificates {
+  padding: 40px 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.certificates__title {
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .certificates__title {
+    font-size: 50px;
+  }
+}
+.certificates-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3px 10px;
+  justify-content: space-between;
+}
+.certificates-items__item {
+  width: 30%;
+}
+.certificates::before {
+  content: " ";
+  position: absolute;
+  background: url("../../../public/assets/images/logo.svg") center/contain no-repeat;
+  width: 30px;
+  height: 8px;
+  left: 50%;
+  top: 30px;
+  transform: translate(-50%, 0);
+}
+@media (min-width: 1024px) {
+  .certificates {
+    padding: 130px 120px 60px;
+    gap: 100px;
+  }
+  .certificates__items {
+    gap: 12px 50px;
+  }
+  .certificates::before {
+    width: 85px;
+    height: 23px;
+    top: 110px;
+  }
+}
+
+/*# sourceMappingURL=Certificates.css.map */

@@ -1,0 +1,28 @@
+@import "../../utils/mixins";
+@import "../../utils/vars";
+
+
+.custom-button {
+  background: $c-red;
+  height: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  transition: box-shadow 200ms;
+  font-size: 10px;
+  cursor: pointer;
+  color: #fff;
+  width: max-content;
+
+  &:hover {
+    box-shadow: inset 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  @include onDesktop {
+    height: 60px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+}

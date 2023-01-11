@@ -333,6 +333,7 @@ label {
 
 .wrap {
   margin-bottom: 15px;
+  overflow: visible;
 }
 @media (min-width: 1024px) {
   .wrap {

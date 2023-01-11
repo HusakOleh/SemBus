@@ -6,10 +6,15 @@ import {auth} from "../../utils/firebaseConfigAndFunctions";
 import {getTranslation} from "../../utils/helpers";
 import ClientChat from "../../components/ClientChat/ClientChat";
 
-import { Order } from "../../components/Order/Order";
-import { Benefits } from "../../components/Benefits/Benefits";
-import { ScrollBlock } from "../../components/ScrollBlock/ScrollBlock";
-import { BusPark } from "../../components/BusPark/BusPark";
+import {Order} from "../../components/Order/Order";
+import {Benefits} from "../../components/Benefits/Benefits";
+import {ScrollBlock} from "../../components/ScrollBlock/ScrollBlock";
+import {BusPark} from "../../components/BusPark/BusPark";
+import {Feedbacks} from "../../components/Feedbacks/Feedbacks";
+import {VideoBlock} from "../../components/VideoBlock/VideoBlock";
+import {CitySlider} from "../../components/CitySlider/CitySlider";
+import {Certificates} from "../../components/Certificates/Certificates";
+import {ContactUs} from "../../components/ContactUs/ContactUs";
 
 export const Home = () => {
     //#region Get user from app context
@@ -67,6 +72,26 @@ export const Home = () => {
 
             <div className="wrap">
               <BusPark />
+            </div>
+
+            <div className="wrap">
+              <Feedbacks />
+            </div>
+
+            <div className="wrap">
+              <VideoBlock />
+            </div>
+
+            <div className="wrap">
+              <CitySlider />
+            </div>
+
+            <div className="wrap">
+              <Certificates />
+            </div>
+
+            <div className="wrap">
+              <ContactUs />
             </div>
           </section>
 

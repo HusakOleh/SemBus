@@ -66,6 +66,7 @@ label {
 
 .wrap {
   margin-bottom: 15px;
+  overflow: visible;
 
   @include onDesktop {
     margin-bottom: 40px;

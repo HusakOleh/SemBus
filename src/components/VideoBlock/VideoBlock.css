@@ -1,0 +1,62 @@
+.videoblock {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.videoblock__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+.videoblock__title {
+  text-align: left;
+  font-family: "Noto Sans Display", "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #333333;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .videoblock__title {
+    font-size: 34px;
+  }
+}
+.videoblock__text {
+  text-align: left;
+  font-size: 10px;
+  color: #707070;
+  margin: 0;
+  width: 100%;
+}
+.videoblock__player {
+  width: 100%;
+  height: 100px;
+  background: green;
+}
+@media (min-width: 1024px) {
+  .videoblock {
+    padding: 0 120px 60px;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .videoblock__content {
+    gap: 20px;
+    align-items: flex-start;
+    flex-grow: 7;
+  }
+  .videoblock__text {
+    font-size: 16px;
+  }
+  .videoblock__player {
+    flex-grow: 5;
+    flex-shrink: 0;
+    flex-basis: 480px;
+  }
+}
+
+/*# sourceMappingURL=VideoBlock.css.map */

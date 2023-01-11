@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './Benefits.scss';
 import {BenefitsListItem} from "../BenefitsListItem/BenefitsListItem";
 
@@ -15,14 +15,16 @@ const listItems = [
 
 export const Benefits = () => {
 
+  const [benefit, setBenefit] = useState("like");
+
   return (
     <div className="benefits">
       <div className="benefits__visual">
 
         <div className="benefits__visual-img">
           <img
-            src="./assets/images/benefits-main.png"
-            alt=""
+            src={`./assets/images/benefits-${benefit}.png`}
+            alt="main-benefit"
             className="benefits__visual-img-main"
           />
         </div>
@@ -31,26 +33,32 @@ export const Benefits = () => {
           <BenefitsListItem
             content="популярне"
             icon="like"
+            setBenefit={setBenefit}
           />
           <BenefitsListItem
             content="USB-зарядки"
             icon="usb"
+            setBenefit={setBenefit}
           />
           <BenefitsListItem
             content="Зручні сидіння"
             icon="seats"
+            setBenefit={setBenefit}
           />
           <BenefitsListItem
             content="Кондиціонер"
             icon="conditioner"
+            setBenefit={setBenefit}
           />
           <BenefitsListItem
             content="Туалети"
             icon="wc"
+            setBenefit={setBenefit}
           />
           <BenefitsListItem
             content="WIFI"
             icon="wifi"
+            setBenefit={setBenefit}
           />
         </ul>
       </div>
